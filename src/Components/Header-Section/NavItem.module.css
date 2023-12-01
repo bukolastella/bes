@@ -1,0 +1,5 @@
+.item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #00703c;
+}
