@@ -1,0 +1,73 @@
+.footerContent {
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* border: 2px solid red; */
+  padding: 0px;
+}
+.footerContent h3 {
+  color: #f2f4f6;
+  font-size: 20px;
+  font-family: "Roboto", serif;
+}
+.footerContent ul {
+  list-style: none;
+  /* border: 2px solid red; */
+  padding: 0px;
+  color: #fafbfc;
+  /* margin-top: 14px; */
+}
+
+.footerContent ul li {
+  font-family: "Quicksand", serif;
+  font-weight: 500;
+  line-height: 28px;
+  vertical-align: top;
+  font-size: 15px;
+}
+.topFour li,
+.topTwo li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.footerLogo {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+.footerLogo strong {
+  color: #90f0a7;
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 36px */
+}
+.topOne p {
+  max-width: 320px;
+  font-family: "Roboto", serf;
+  color: #fafbfc;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  /* border: 2px sild red; */
+  margin-top: 14px;
+}
+
+.footerBottom p {
+  text-align: center;
+  color: #fafbfc;
+  font-family: "Quicksand" sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 24px */
+}

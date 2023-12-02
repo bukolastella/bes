@@ -5,11 +5,18 @@
 }
 .nav li {
   color: var(--gray-800, #333437);
-
-  /* Text Md/Regular */
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
+}
+.nav li a {
+  text-decoration: none;
+}
+
+.nav :global(.active) {
+  color: #00703c;
+  border-bottom: 1px solid #00703c;
+  padding-bottom: 5px;
 }

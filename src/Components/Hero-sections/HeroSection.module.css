@@ -1,0 +1,81 @@
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===========LEFT STYLES ====== */
+
+.heroSectionLeft {
+  max-width: 480px;
+  padding-bottom: 20px;
+}
+.headingDiv {
+  position: relative;
+}
+.heroSectionLeft h1 {
+  color: #333437;
+  font-family: "Roboto", serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px; /* 72px */
+  /* line-height: 72px;  */
+  /* letter-spacing: -0.96px; */
+}
+.headingSvg {
+  position: absolute;
+  bottom: -15px;
+  padding: 0px 10px;
+}
+.heroSectionLeft h1 span {
+  color: #1a8718;
+}
+.heroSectionLeft > p {
+  color: #67696e;
+  font-family: "Roboto", serif;
+  font-size: 16px;
+  /* font-size: 18px; */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 27px */
+  padding-bottom: 20px;
+}
+
+/* ===========RIGHT STYLES ====== */
+.heroSectionRight {
+  max-width: 600px;
+  background-image: url("../BG-image.png");
+  background-position: center;
+  background-size: cover;
+  height: 489px;
+  padding: 10px 0px;
+}
+.heroSectionRightImage {
+  width: 100%;
+  padding-left: 15px;
+}
+
+/* ===========SINCE STYLES ====== */
+.sinceDiv {
+  font-family: "Roboto", serif;
+}
+.sinceDiv p {
+  color: #005cb7;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* line-height: 27px; */
+  /* letter-spacing: 0.72px; */
+}
+.sinceDiv h2 {
+  color: #1a8718;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 122.222% */
+  /* line-height: 44px; 122.222% */
+  /* letter-spacing: -0.72px; */
+}
