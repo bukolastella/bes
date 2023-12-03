@@ -1,0 +1,104 @@
+.expertise {
+  padding: 0px;
+  margin-top: 50px;
+}
+
+.expertise h3 {
+  color: #00703c;
+  text-align: center;
+  font-family: "Roboto", serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  max-width: 700px;
+  margin-left: 30px;
+  /* letter-spacing: -0.72px; */
+}
+.expertiseContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.expertiseContent > .left {
+  max-width: 500px;
+  height: auto;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+.expertiseContent > .right {
+  max-width: 600px;
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* column-gap: 20px; */
+  row-gap: 30px;
+  padding-bottom: 20px;
+}
+/* ===========ExpertiseCard styles================ */
+.expertiseCard {
+  padding: 12px 12px 0px 16px;
+  text-align: left;
+  max-width: 290px;
+  height: 187px;
+}
+.expertiseCard > span {
+  border-radius: 8px;
+  background: rgba(201, 236, 251, 0.5);
+  padding: 20px 10px 10px;
+  /* margin-top: 50px; */
+  box-shadow: 0px 4px 40px 0px rgba(127, 181, 230, 0.12);
+}
+.expertiseCard > h4 {
+  color: #00703c;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  margin-top: 25px;
+}
+.expertiseCard > p {
+  color: #67696e;
+  font-family: Quicksand;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 10px;
+}
+/* =========experience In Action Styles */
+.experience {
+  padding: 0px;
+}
+.experience > p {
+  color: #005cb7;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.experience > h4 {
+  color: #00703c;
+  font-family: "Roboto", serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  margin-top: 10px;
+}
+.experience > .experienceImageDiv {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 70px;
+}
+.experience > .experienceImageDiv img {
+  width: 100%;
+}

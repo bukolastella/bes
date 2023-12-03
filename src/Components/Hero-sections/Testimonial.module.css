@@ -1,0 +1,80 @@
+.testimonial {
+  padding: 0px;
+  /* border: 2px solid red; */
+}
+.testimonial h3 {
+  color: #005cb7;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: center;
+}
+.testimonailContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 34px;
+  padding-bottom: 30px;
+}
+
+/* =============testimonialCard Styles ========== */
+.testimonialCard {
+  position: relative;
+  max-width: 360px;
+  /* border: 2px solid red; */
+  height: auto;
+  padding: 35px;
+  text-align: center;
+  border-radius: 8px;
+  background: #f2f4f6;
+  box-shadow: 0px 4px 40px 0px rgba(127, 181, 230, 0.12);
+}
+.testimonialCard > span {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+.testimonialCard > .imageDiv {
+  width: 80px;
+  height: 80px;
+  border-radius: 1998px;
+  background-color: #333437;
+  margin: 0 auto;
+}
+.testimonialCard > .rating {
+  margin-top: 20px;
+}
+.testimonialCard > h4 {
+  color: #333437;
+  margin-top: 10px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.testimonialCard > h6 {
+  color: #67696e;
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  margin-top: 5px;
+}
+.testimonialCard hr {
+  width: 40%;
+  margin: 20px auto 0px;
+}
+.testimonialCard p {
+  color: #67696e;
+  text-align: center;
+  font-family: "Roboto", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 25px;
+}

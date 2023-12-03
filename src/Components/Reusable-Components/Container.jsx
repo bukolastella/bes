@@ -1,6 +1,11 @@
 import styles from "./Container.module.css";
 
-function Container({ children, paddingType, background = "#FAFBFC" }) {
+function Container({
+  children,
+  paddingType = "sidePaddings",
+  background = "#fff",
+  //   background = "#FAFBFC",
+}) {
   //   const paddingType = paddingType;
   return (
     <div

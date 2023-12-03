@@ -9,7 +9,6 @@ const myArray = [
   { num: "100+", text: "Clients Satisfied" },
   { num: "100+", text: "Cities Visited" },
 ];
-console.log(myArray);
 function SummaryOfJobs() {
   return (
     <Container paddingType="sidePaddings" background="#EEF5F2">

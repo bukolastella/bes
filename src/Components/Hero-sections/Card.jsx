@@ -1,4 +1,4 @@
-import styles from "./Card.module.css";
+import styles from "./SummaryOfJobs.module.css";
 
 function Card({ heading, text }) {
   return (

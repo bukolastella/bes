@@ -1,10 +1,5 @@
 import styles from "./Button.module.css";
-function Button({
-  background = "#005CB7",
-  color = "#FAFBFC",
-
-  children,
-}) {
+function Button({ background = "#005CB7", color = "#FAFBFC", children }) {
   //   const btnStyles = {
   //     background,
   //     color,
@@ -24,9 +19,6 @@ function Button({
         fontSize: "15px",
         fontStyle: "normal",
         fontWeight: "500",
-        // fontSize: "16px",
-        // lineHeight: "24px" /* 250% */,
-        // text-decoration-line: underline;
       }}
       className={styles.btn}
     >

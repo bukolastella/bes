@@ -2,13 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
 }
 
 /* ===========LEFT STYLES ====== */
 
 .heroSectionLeft {
-  max-width: 480px;
+  /* max-width: 480px; */
+  max-width: 630px;
   padding-bottom: 20px;
+  /* border: 2px solid red; */
+  padding: 0px;
 }
 .headingDiv {
   position: relative;
@@ -38,13 +42,15 @@
   /* font-size: 18px; */
   font-style: normal;
   font-weight: 400;
-  line-height: 27px; /* 27px */
+  line-height: 27px;
   padding-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* ===========RIGHT STYLES ====== */
 .heroSectionRight {
-  max-width: 600px;
+  /* max-width: 600px; */
+  max-width: 570px;
   background-image: url("../BG-image.png");
   background-position: center;
   background-size: cover;
@@ -59,6 +65,8 @@
 /* ===========SINCE STYLES ====== */
 .sinceDiv {
   font-family: "Roboto", serif;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 .sinceDiv p {
   color: #005cb7;
@@ -66,8 +74,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
-  /* line-height: 27px; */
-  /* letter-spacing: 0.72px; */
 }
 .sinceDiv h2 {
   color: #1a8718;
@@ -75,7 +81,5 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  /* 122.222% */
-  /* line-height: 44px; 122.222% */
-  /* letter-spacing: -0.72px; */
+  margin-top: 30px;
 }
