@@ -1,10 +1,15 @@
 import Header from "../Components/Header-Section/Header";
+import OurTeam from "../Components/ProjectContent/OurTeam";
+import ProjectHeroSection from "../Components/ProjectContent/ProjectHeroSection";
+import RecentProject from "../Components/ProjectContent/RecentProject";
 
 function OurProjects() {
   return (
-    <div>
+    <div className="projectPage">
       <Header />
-      <h1>Our Projects</h1>
+      <ProjectHeroSection />
+      <OurTeam />
+      <RecentProject />
     </div>
   );
 }

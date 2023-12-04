@@ -94,11 +94,17 @@
   line-height: 44px;
   margin-top: 10px;
 }
-.experience > .experienceImageDiv {
+.successfulProjectsImageDiv {
   width: 100%;
   margin-top: 20px;
   padding-bottom: 70px;
+
+  /* height: auto; */
+  /* height: 500px; */
+  /* border: 2px solid red; */
+  /* object-fit: cover; */
 }
-.experience > .experienceImageDiv img {
+.successfulProjectsImageDiv img {
   width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,137 @@
+.top {
+  height: 250px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  /* border: solid red; */
+}
+
+.heading {
+  position: relative;
+  padding: 0px;
+  /* border: solid red; */
+  max-width: 1440px;
+}
+.heading > svg {
+  /* height: 90%; */
+  padding: 0px;
+}
+.headingContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: solid red; */
+}
+.headingContent h3 {
+  color: #fafbfc;
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  /* letter-spacing: -0.72px; */
+}
+.headingContent p {
+  color: #f2f4f6;
+  text-align: center;
+  font-family: "Quicksand", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  gap: 20px;
+}
+.headingContent p > span {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==========Bottom Styles============= */
+.bottom {
+  padding: 70px 0px;
+  background: #fafbfc;
+  /* border: 2px solid green; */
+  width: 100%;
+}
+
+.bottomUp {
+  /* width: 100%; */
+  /* height: 381px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  /* border: 2px solid red; */
+  /* flex-wrap: wrap; */
+}
+.leftUp {
+  /* max-width: 700px; */
+  width: 700px;
+  height: 230px;
+  color: #67696e;
+  font-family: "Quicksand", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 24px */
+  text-align: start;
+  padding: 16px;
+}
+.leftUp > h3 {
+  color: #00703c;
+  /* text-align: l; */
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+
+  /* letter-spacing: -0.72px; */
+}
+
+.leftUp p {
+  color: #67696e;
+  font-family: "Quicksand", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 24px */
+  margin-top: 15px;
+}
+.rightUp {
+  padding: 0px;
+  width: 500px;
+  /* border: 2px solid red; */
+}
+.rightUp img {
+  width: 100%;
+}
+/* ==========bottomDown Styles============= */
+
+.bottomDown {
+  margin-top: 100px;
+}
+.bottomDown p {
+  color: #67696e;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 16px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}

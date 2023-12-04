@@ -1,0 +1,28 @@
+.recentProject {
+  padding: 72px 0px;
+  text-align: center;
+}
+
+.recentProject > h3 {
+  color: #00703c;
+  font-family: "Roboto", serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.recentProject > p {
+  color: #67696e;
+  text-align: center;
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  width: 600px;
+  margin: 20px auto 0px;
+}
+.space {
+  height: 32px;
+}
