@@ -1,0 +1,47 @@
+.topConatiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  background-color: #f2f4f6;
+  padding: 10px 10px 20px 10px;
+  border-radius: 8px;
+  /* margin-bottom: 20px; */
+}
+
+.whatTopCard {
+  text-align: left;
+  max-width: 360px;
+  height: auto;
+  padding: 24px;
+  border-radius: 8px 8px 0px 0px;
+  /* border: 2px solid red; */
+}
+.whatTopCard > span {
+  width: 50px;
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(201, 236, 251, 0.5);
+}
+.whatTopCard > h4 {
+  color: #67696e;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  margin-top: 10px;
+}
+.whatTopCard > p {
+  color: #67696e;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 5px;
+}

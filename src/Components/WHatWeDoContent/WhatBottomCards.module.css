@@ -1,0 +1,42 @@
+.bottonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 20px 0px;
+}
+
+.bottonContainer > .left {
+  width: 49%;
+  /* border: 2px solid red; */
+}
+
+.bottonContainer > .right {
+  width: 49%;
+  padding: 0px 3px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.bottonContainer > .right > div {
+  width: 100%;
+  /* border: 2px solid red;  */
+}
+/* .bottonContainer > .right > div:last-child { */
+/* margin-top: 30px; */
+/* } */
+.bottonContainer > .left img,
+.bottonContainer > .right div img {
+  width: 100%;
+  height: auto;
+}
+
+.space {
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+}
