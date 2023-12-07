@@ -10,3 +10,21 @@
 .sidePaddings {
   padding: 0px 104px;
 }
+
+@media (max-width: 1024px) {
+  .sidePaddings {
+    padding: 0px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidePaddings {
+    padding: 0px 30px;
+  }
+}
+
+@media (max-width: 430px) {
+  .sidePaddings {
+    padding: 0px 30px;
+  }
+}

@@ -8,16 +8,13 @@
 /* ===========LEFT STYLES ====== */
 
 .heroSectionLeft {
-  /* max-width: 480px; */
-  max-width: 630px;
-  padding-bottom: 20px;
-  /* border: 2px solid red; */
+  width: 630px;
   padding: 0px;
 }
-.headingDiv {
+.heroSectionLeft > .headingDiv {
   position: relative;
 }
-.heroSectionLeft h1 {
+.headingDiv h1 {
   color: #333437;
   font-family: "Roboto", serif;
   font-size: 48px;
@@ -32,7 +29,7 @@
   bottom: -15px;
   padding: 0px 10px;
 }
-.heroSectionLeft h1 span {
+.headingDiv h1 span {
   color: #1a8718;
 }
 .heroSectionLeft > p {
@@ -50,16 +47,19 @@
 /* ===========RIGHT STYLES ====== */
 .heroSectionRight {
   /* max-width: 600px; */
-  max-width: 570px;
+  /* max-width: 570px; */
+  width: 570px;
   background-image: url("../BG-image.png");
   background-position: center;
   background-size: cover;
-  height: 489px;
+  height: auto;
   padding: 10px 0px;
 }
-.heroSectionRightImage {
+.heroSectionRight > .heroSectionRightImage {
   width: 100%;
-  padding-left: 15px;
+  margin-left: -5px;
+  transform: rotate(-5deg);
+  margin-bottom: -35px;
 }
 
 /* ===========SINCE STYLES ====== */
@@ -69,6 +69,7 @@
   padding-bottom: 20px;
 }
 .sinceDiv p {
+  font-family: "Roboto", serif;
   color: #005cb7;
   font-size: 18px;
   font-style: normal;
@@ -76,10 +77,92 @@
   line-height: 20px;
 }
 .sinceDiv h2 {
+  font-family: "Roboto", serif;
   color: #1a8718;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin-top: 30px;
+}
+@media (max-width: 1024px) {
+  .heroSectionLeft {
+    width: 400px;
+    /* border: 2px solid green; */
+  }
+  .heroSectionRight {
+    width: 480px;
+    /* background-size: cover; */
+    /* border: 2px solid green; */
+  }
+  .heroSectionRight > .heroSectionRightImage {
+    width: 110%;
+    padding: 0px;
+    margin-top: 65px;
+    margin-left: -13px;
+    /* padding-right: 20px; */
+    /* border: 2px solid blue; */
+  }
+  .heroSectionRightImage img {
+    width: 100%;
+    /* object-fit: cover; */
+  }
+
+  .headingDiv h1 {
+    font-size: 38px;
+  }
+  .sinceDiv {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection {
+    width: 100%;
+    /* width: 768px; */
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 50px;
+  }
+  .heroSectionLeft,
+  .heroSectionRight {
+    width: 92%;
+    border: 2px solid red;
+  }
+
+  .heroSectionRight > .heroSectionRightImage {
+    width: 90%;
+  }
+  .sinceDiv {
+    margin-left: 3%;
+  }
+
+  .headingDiv h1 {
+    font-size: 34px;
+  }
+  .sinceDiv {
+    margin-top: 20px;
+  }
+  .sinceDiv p {
+    font-size: 16px;
+  }
+  .sinceDiv h2 {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .heroSection {
+    justify-content: flex-start;
+  }
+  .headingDiv h1 {
+    font-size: 30px;
+  }
+  .heroSectionLeft > p {
+    font-size: 14px;
+  }
+
+  .sinceDiv {
+    display: none;
+  }
 }

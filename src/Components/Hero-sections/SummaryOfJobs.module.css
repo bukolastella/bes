@@ -20,6 +20,7 @@
 }
 .eachCard {
   width: 150px;
+  height: auto;
   padding: 0px;
   position: absolute;
   top: 50%;
@@ -41,7 +42,7 @@
   text-align: center;
 }
 
-.card p {
+.card > p {
   color: #333437;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
@@ -49,4 +50,29 @@
   font-weight: 500;
   line-height: 24px;
   margin-top: 10px;
+}
+@media (max-width: 1024px) {
+  .eachCard h3 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 768px) {
+  .summaryDiv {
+    padding: 0px;
+  }
+  .card > p {
+    /* font-size: 16px; */
+    font-weight: 700;
+  }
+  .eachCard h3 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 430px) {
+  .summaryDiv {
+    padding: 0px;
+  }
+  .eachCard h3 {
+    font-size: 24px;
+  }
 }

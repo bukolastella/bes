@@ -13,7 +13,7 @@ function Header() {
         <Logo />
         <Nav />
         <div className={styles.btnContainer}>
-          <Link to="ourcompany">
+          <Link to="ourcompany" replace>
             {/* <Link> */}
             <Button>
               Contact Us

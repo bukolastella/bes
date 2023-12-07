@@ -4,6 +4,7 @@ function Container({
   children,
   paddingType = "sidePaddings",
   background = "#fff",
+
   //   background = "#FAFBFC",
 }) {
   //   const paddingType = paddingType;
