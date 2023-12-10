@@ -11,3 +11,42 @@
   height: 100%;
   width: 100%;
 }
+.mapParent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.mapParent button {
+  cursor: pointer;
+  width: 200px;
+  margin: 0 auto;
+  background: #00703c;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  padding: 7px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+@media (max-width: 1024px) {
+  .mapContainer {
+    height: 500px;
+  }
+}
+@media (max-width: 950px) {
+  .mapContainer {
+    height: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .mapContainer {
+    height: 300px;
+  }
+}

@@ -10,10 +10,27 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .btn > span {
   margin-top: 5px;
   padding: 0px;
   /* border: 1px solid red; */
+}
+.btn > span > svg {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 600px) {
+  .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+  .btn > span > svg {
+    width: 16px;
+    height: 16px;
+  }
 }

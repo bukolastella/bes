@@ -1,20 +1,5 @@
 import styles from "./Button.module.css";
-function Button({
-  background = "#005CB7",
-  color = "#FAFBFC",
-  children,
-  onHandler,
-}) {
-  //   const btnStyles = {
-  //     background,
-  //     color,
-  //     fontFamily: "Quicksand",
-  //     fontSize: "16px",
-  //     fontStyle: "normal",
-  //     fontWeight: "500",
-  //     lineHeight: "150%" /* 24px */,
-  //     // text-decoration-line: underline;
-  //   };
+function Button({ background = "#005CB7", color = "#FAFBFC", children }) {
   return (
     <button
       style={{
@@ -26,7 +11,6 @@ function Button({
         fontWeight: "500",
       }}
       className={styles.btn}
-      onSubmit={() => onHandler()}
     >
       {children}
     </button>

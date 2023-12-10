@@ -9,3 +9,16 @@
 .btnContainer a {
   text-decoration: none;
 }
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 940px) {
+  .btnContainer {
+    display: none;
+  }
+  .hamburger {
+    /* border: 2px solid red; */
+    display: block;
+  }
+}

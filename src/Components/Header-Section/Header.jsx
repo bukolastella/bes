@@ -5,6 +5,7 @@ import styles from "./Header.module.css";
 // import Container from "./Components/Reusable-Components/Container";
 import Logo from "./Logo";
 import Nav from "./Nav";
+import Hamburger from "./Hamburger";
 
 function Header() {
   return (
@@ -46,6 +47,7 @@ function Header() {
             </Button>
           </Link>
         </div>
+        <Hamburger />
       </div>
     </Container>
   );

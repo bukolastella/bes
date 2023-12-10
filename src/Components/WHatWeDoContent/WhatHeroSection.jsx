@@ -175,10 +175,10 @@ function WhatHeroSection() {
       <div className={styles.whatHerosection}>
         <div className={styles.content}>
           <h3>Building Tomorrow&apos;s Reality with Expertise</h3>
-          <h6>
+          <p>
             Crafting Your Visions, One Project at a Time, with Dedication and
             Expertise
-          </h6>
+          </p>
         </div>
       </div>
       <div className={styles.heromsg}>

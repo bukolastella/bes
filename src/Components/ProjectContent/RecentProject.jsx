@@ -11,9 +11,9 @@ function RecentProject() {
           Explore our portfolio of successfully completed projects that showcase
           our expertise and commitment to excellence.
         </p>
-        <div className={styles.space}></div>
+        <div className={styles.space1}></div>
         <SuccessfulProject />
-        <div className={styles.space}></div>
+        <div className={styles.space2}></div>
 
         <Button background="#C9ECFB" color="#67696E">
           <span>

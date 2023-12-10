@@ -3,6 +3,7 @@ import Container from "../Reusable-Components/Container";
 import styles from "./ProjectHeroSection.module.css";
 
 const btnArray = ["Mission", "Vision", "Our Value"];
+
 function ProjectHeroSection() {
   return (
     <Container background="#FAFBFC">
@@ -84,6 +85,7 @@ function ProjectHeroSection() {
 }
 
 export default ProjectHeroSection;
+
 {
   /* <div>
               <svg

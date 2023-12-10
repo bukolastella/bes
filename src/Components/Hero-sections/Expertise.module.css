@@ -3,15 +3,15 @@
   margin-top: 50px;
 }
 
-.expertise h3 {
+.expertise > h3 {
   color: #00703c;
-  text-align: center;
+  text-align: left;
   font-family: "Roboto", serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 44px;
-  max-width: 700px;
+  width: 700px;
   margin-left: 30px;
   /* letter-spacing: -0.72px; */
 }
@@ -24,15 +24,15 @@
   padding-bottom: 20px;
 }
 .expertiseContent > .left {
-  max-width: 500px;
+  width: 500px;
   height: auto;
   padding-bottom: 30px;
   border-radius: 10px;
 }
-.expertiseContent > .right {
-  max-width: 600px;
-  height: auto;
 
+.expertiseContent > .right {
+  width: 600px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@
 .expertiseCard {
   padding: 12px 12px 0px 16px;
   text-align: left;
-  max-width: 290px;
+  width: 290px;
   height: 187px;
 }
 .expertiseCard > span {
@@ -107,4 +107,82 @@
 .successfulProjectsImageDiv img {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1024px) {
+  .expertise > h3 {
+    font-style: 24px;
+  }
+  .expertiseContent,
+  .experience {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .experience {
+    margin-top: 30px;
+    margin-left: 5%;
+  }
+  .experience > h4 {
+    font-size: 32px;
+  }
+
+  .expertiseContent > .right,
+  .expertiseContent > .left {
+    width: 90%;
+  }
+
+  .expertiseCard {
+    width: 340px;
+  }
+}
+/* @media (max-width: 768px) { */
+@media (max-width: 940px) {
+  .expertiseContent {
+    width: 100%;
+  }
+  .expertiseContent > .right,
+  .expertiseContent > .left,
+  .experience {
+    width: 90%;
+    /* border: 2px solid red; */
+  }
+
+  .expertiseContent > .left img {
+    width: 100%;
+  }
+  .expertise > h3 {
+    width: 80%;
+    font-size: 28px;
+  }
+  .experience > h4 {
+    font-size: 28px;
+  }
+  .expertise > h3 {
+    font-style: 24px;
+    line-height: 38px;
+  }
+  .expertiseCard {
+    width: 280px;
+  }
+}
+@media (max-width: 430px) {
+  .expertise {
+    width: 100%;
+  }
+  .expertise > h3 {
+    font-size: 22px;
+  }
+  .experience > h4 {
+    font-size: 22px;
+  }
+  .experience > p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 360px) {
+  .expertise > h3 {
+    margin-left: 0px;
+  }
 }

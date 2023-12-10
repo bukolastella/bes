@@ -79,7 +79,8 @@
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
+@media (max-width: 940px) {
   .whyChooseUs > h2,
   .whyChooseUs p {
     margin-left: 3%;
@@ -92,4 +93,29 @@
   .cardContainer {
     /* justify-content: center; 
   } */
+}
+@media (max-width: 400px) {
+  .whyChooseUs > p {
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .whyChooseCard {
+    padding: 0px;
+  }
+  .whyChooseUs > h2,
+  .whyChooseUs p {
+    margin-left: 0px;
+    /* border: 2px solid green; */
+  }
+  .whyChooseUs > h2 {
+    font-size: 20px;
+  }
+  .cardContent h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .whyChooseUs p {
+    font-size: 15px;
+  }
 }

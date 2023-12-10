@@ -1,6 +1,5 @@
 .companyContentDiv {
   background-color: #fff;
-  /* text-align: center; */
   margin-top: 120px;
 }
 
@@ -15,7 +14,6 @@
 }
 .companyContentDiv > p {
   color: #333437;
-  /* text-align: center; */
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -25,8 +23,7 @@
   margin: 0 auto;
 }
 .contentDiv > .left {
-  max-width: 290px;
-  /* border: 2px solid red; */
+  width: 290px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -39,16 +36,7 @@
 }
 .left > li svg {
   width: 50px;
-  /* border: 2px solid green; */
   padding: 0px;
-}
-
-.contentDiv > .left > li:first-child {
-  margin-left: -9px;
-}
-
-.left > li :nth-child(2) {
-  margin-left: 10px;
 }
 
 .left > li:last-child {
@@ -56,23 +44,39 @@
 }
 .left > li {
   display: flex;
-  max-width: 280px;
+  width: 280px;
   justify-content: flex-start;
   column-gap: 20px;
 }
-.left > li:first-child span {
-  margin-left: 2px;
+.left > li:first-child {
+  display: flex;
+  justify-content: space-between;
 }
-.left > li:last-child span {
-  margin-left: -1px;
+.left > li:first-child > div {
+  display: flex;
+  align-items: center;
+}
+.contentDiv > .left > li:first-child div > svg {
+  margin-top: -2px;
+  margin-left: -8px;
+}
+.contentDiv > .left > li:first-child div > span {
+  margin-left: 14px;
+}
+
+.left > li:first-child > span {
+  margin-top: 10px;
+  display: none;
+}
+
+.left > li:last-child > span {
+  margin-left: -10px;
 }
 .contentDiv {
   display: flex;
   justify-content: center;
   column-gap: 100px;
   align-items: flex-start;
-  /* margin-top: 30px; */
-  /* border: 2px solid green; */
   padding: 30px 0px 100px;
 }
 /* ===========right ================ */
@@ -91,18 +95,9 @@
 .contentDiv > .right select {
   position: relative;
   padding-right: 50px;
-  /* margin-right: 20px; */
-  /* border: 2px solid red; */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  /* background-color: transparent; */
-  /* background-color: #fafbfc transparent transparent transparent; */
-
-  /* background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%; */
 }
 
 .contentDiv > .right input,
@@ -112,15 +107,11 @@
   padding: 16px 24px;
   background: #fafbfc;
   border-radius: 8px;
-  /* color: #348cd3; */
-  /* color: #348cd3; #FAFBFC*/
 }
 .contentDiv > .right div > span {
   position: absolute;
-  /* z-index: 2; */
   right: 10px;
   top: 16px;
-  /* padding: 0px; */
 }
 
 .contentDiv > .right .textAreaDiv {
@@ -136,15 +127,71 @@
   font-size: 17px;
   font-weight: 500;
 }
-/* 
-.contentDiv > .right .services > span {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 6px 6px 0 6px;
-  /* border-color: #333 transparent transparent transparent; 
-} */
+
+@media (max-width: 1024px) {
+  .companyContentDiv {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 940px) {
+  .companyContentDiv {
+    width: 100%;
+    padding: 0px;
+  }
+  .contentDiv {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 0px 30px 0px;
+  }
+  .contentDiv > .right,
+  .contentDiv > .left {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .companyContentDiv > h2 {
+    font-size: 30px;
+  }
+  .left > li:first-child > span {
+    display: block;
+  }
+  .contentDiv > .left > li:first-child {
+    width: 100%;
+  }
+  .left > li:nth-child(2) {
+    width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .companyContentDiv > h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 420px) {
+  .companyContentDiv > p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .contentDiv > .left > li:first-child {
+    margin-left: -10px;
+  }
+  .left > li:nth-child(2) {
+    width: 300px;
+    margin-left: -14px;
+  }
+
+  .left > li:last-child {
+    margin-left: -15px;
+  }
+  .contentDiv > .right input,
+  .contentDiv > .right select,
+  .contentDiv > .right option,
+  .contentDiv > .right textarea {
+    padding: 10px;
+  }
+  .contentDiv > .right div > span {
+    top: 10px;
+  }
+}

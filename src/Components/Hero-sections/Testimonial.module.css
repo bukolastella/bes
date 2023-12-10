@@ -22,7 +22,7 @@
 /* =============testimonialCard Styles ========== */
 .testimonialCard {
   position: relative;
-  max-width: 360px;
+  width: 360px;
   /* border: 2px solid red; */
   height: auto;
   padding: 35px;

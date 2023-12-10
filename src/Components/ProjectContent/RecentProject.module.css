@@ -1,5 +1,5 @@
 .recentProject {
-  padding: 72px 0px;
+  padding: 52px 0px;
   text-align: center;
 }
 
@@ -21,8 +21,44 @@
   font-weight: 500;
   line-height: 27px;
   width: 600px;
-  margin: 20px auto 0px;
+  margin: 10px auto 0px;
 }
 .space {
   height: 32px;
+}
+.space2 {
+  height: 0px;
+  margin-top: -50px;
+}
+.space1 {
+  height: 10px;
+}
+@media (max-width: 940px) {
+  .recentProject > h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .recentProject {
+    padding-top: 10px;
+  }
+  .recentProject > h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .recentProject > p {
+    width: 90%;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  /* .recentProject > h3 {
+    font-size: 20px;
+  } */
+  .recentProject > p {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }

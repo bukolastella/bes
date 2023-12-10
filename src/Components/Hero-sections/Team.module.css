@@ -28,3 +28,33 @@
 .btnDiv {
   margin-top: 30px;
 }
+@media (max-width: 1024px) {
+  .teamDiv h3 {
+    font-size: 30px;
+  }
+}
+/* @media (max-width: 768px) { */
+@media (max-width: 940px) {
+  .teamDiv {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .teamDiv h3 {
+    font-size: 26px;
+  }
+  .teamDiv p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media (max-width: 430px) {
+  .teamDiv {
+    width: 80%;
+  }
+  .teamDiv h3 {
+    font-size: 22px;
+  }
+  .teamDiv p {
+    font-size: 16px;
+  }
+}
