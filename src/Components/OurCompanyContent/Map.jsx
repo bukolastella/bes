@@ -1,59 +1,68 @@
 import styles from "./Map.module.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useGetUserLocation } from "./useGetUserLocation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+// Testing
+// import React, { useEffect } from "react";
+// import L from "leaflet";
+import "leaflet-routing-machine";
+import "leaflet/dist/leaflet.css";
+import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
+
 // import Button from "../Reusable-Components/Button";
 function Map() {
-  // const officePosition = [8.1574, 3.6147];
+  // const officePosition2 = [9.8487424, 5.4504704];
   // const EisoftofficePosition = [6.438912, 3.4373632];
-  const officePosition = [6.486539, 3.3742237];
+  // const bagco = {lat: 6.4487424, lng: 3.4504704}
+  // const zoom = 5;
+  const zoom = 11;
+  const officeLat = 6.486539;
+  const officeLng = 3.3742237;
+  const officePosition = [officeLat, officeLng];
   const [center, setCenter] = useState(officePosition);
-  const [userPos, setUserPos] = useState(null);
-
-  // const [clicked, setClicked] = useState(false);
-  // const userPos = [position.lat, position.lng];
-
-  // const center = officePosition;
+  // const [userPos, setUserPos] = useState(null);
+  // const center = [
+  //   (officePosition2[0] + officeLat) / 2,
+  //   (officePosition2[1] + officeLng) / 2,
+  // ];
   const { error, position, getUserLocation } = useGetUserLocation();
-  const pos = position;
-  console.log(position, pos);
+  // const pos = position;
+  console.log(center);
 
-  // const [userPos, setUserPos] = useState("");
-  // const { position: userPosition } = useGetUserLocation();
-  // console.log(position);
-  // const [center, setCenter] = useState(officePosition);
+  function userHandler() {
+    getUserLocation();
+  }
 
-  // console.log(userPosition);
+  useEffect(() => {
+    if (!position) return;
+    setCenter([
+      (position?.lat + officeLat) / 2,
+      (position?.lng + officeLng) / 2,
+    ]);
+    console.log(position.lat, position.lng);
+  }, [position, officeLat, officeLng]);
+  console.log(center);
 
   // useEffect(() => {
-  //   if (userPosition) setUserPos([userPosition.lat, userPosition.lng]);
-  // }, [userPosition, userPos]);
-  // console.log(userPos);
-  // const center = [
-  //   (officePosition[0] + userPos.lat) / 2,
-  //   (officePosition[1] + userPos.lng) / 2,
-  // ];
+  //   if (!position) return;
 
-  // console.log(userPosition);
-  function userHandler() {
-    const pos = getUserLocation();
-    console.log(pos);
-    setUserPos(pos);
-    console.log("hi");
-    console.log(position);
-    // setUserPos([position.lat, position.lng]);
-    setCenter([
-      (position.lat + officePosition[0]) / 2,
-      (position.lng + officePosition[1]) / 2,
-    ]);
-  }
+  //   const map = L.map("map").setView([position.lat, position.lng]);
+  //   L.Routing.control({
+  //     waypoints: [
+  //       L.latLng([position.lat, position.lng]),
+  //       L.latLng([officeLat, officeLng]),
+  //     ],
+  //     routeWhileDragging: true,
+  //   }).addTo(map);
+  // }, [position.lat, position.lng, officeLat, officeLng]);
 
   return (
     <div className={styles.mapParent}>
       <div className={styles.mapContainer}>
         <MapContainer
           center={center}
-          zoom={13}
+          zoom={zoom}
           scrollWheelZoom={true}
           className={styles.map}
         >
@@ -63,16 +72,12 @@ function Map() {
             // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={officePosition}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
+            <Popup>officePosition1</Popup>
           </Marker>
 
-          {userPos && (
-            <Marker position={officePosition}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
+          {position && (
+            <Marker position={[position.lat, position.lng]}>
+              <Popup>officePosition2</Popup>
             </Marker>
           )}
         </MapContainer>

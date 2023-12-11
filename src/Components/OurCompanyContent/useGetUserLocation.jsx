@@ -20,6 +20,5 @@ export function useGetUserLocation(defaultPosition = null) {
       }
     );
   }
-  // getUserLocation();
   return { error, position, getUserLocation };
 }
