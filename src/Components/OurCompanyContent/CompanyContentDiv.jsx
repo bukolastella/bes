@@ -1,24 +1,31 @@
+// import { useState, useEffect } from "react";
 import { useState } from "react";
 import Container from "../Reusable-Components/Container";
 import styles from "./CompanyContentDiv.module.css";
 import Button from "../Reusable-Components/Button";
 
 function CompanyContentDiv() {
-  const [open, setOpen] = useState(true);
-
+  // const [acc, setAcc] = useState(false);
   const [name, setName] = useState("");
   const [gmail, setGmail] = useState("Eisoft@gmail.com");
   const [service, setServices] = useState("");
   const [textArea, setTextArea] = useState("");
-  const accordiumHandler = () => setOpen((open) => !open);
-  console.log(open, accordiumHandler);
+  const [openForm, setOpenForm] = useState(false);
+
+  function handler(e) {
+    e.preventDefault();
+    console.log("Hey!");
+    setOpenForm((open) => !open);
+  }
+  console.log(openForm);
   const submitHandler = function (e) {
     e.preventDefault();
+    console.log("hello", e);
   };
   return (
     <Container>
       <div className={styles.companyContentDiv}>
-        <h2>Let’s Work Together.</h2>
+        <h2 onClick={handler}>Let’s Work Together.</h2>
         <p>
           Your expertise and projects matter to us. Before accessing our contact
           form and head office details, we welcome your inquiries and feedback.
@@ -45,13 +52,14 @@ function CompanyContentDiv() {
                 </svg>
                 <span>unreal@outlook.com</span>
               </div>
-              <span onClick={accordiumHandler}>
+              <Button background="#fff" handler={handler}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
                   height="17"
                   viewBox="0 0 17 17"
                   fill="none"
+                  className={openForm ? styles.openForm : ""}
                 >
                   <path
                     d="M12.75 10.625L8.5 6.375L4.25 10.625"
@@ -61,7 +69,7 @@ function CompanyContentDiv() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </span>
+              </Button>
             </li>
             <li>
               <svg
@@ -107,150 +115,154 @@ function CompanyContentDiv() {
               <span>+ 84 090 700 788</span>
             </li>
           </ul>
-          {open && (
-            <form onSubmit={submitHandler} className={styles.right}>
-              <div className={styles.name}>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => {
-                    e.preventDefault();
-                    return setName(e.target.value);
-                  }}
-                />
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M13.3337 14V12.6667C13.3337 11.9594 13.0527 11.2811 12.5526 10.781C12.0525 10.281 11.3742 10 10.667 10H5.33366C4.62641 10 3.94814 10.281 3.44804 10.781C2.94794 11.2811 2.66699 11.9594 2.66699 12.6667V14M10.667 4.66667C10.667 6.13943 9.47308 7.33333 8.00033 7.33333C6.52757 7.33333 5.33366 6.13943 5.33366 4.66667C5.33366 3.19391 6.52757 2 8.00033 2C9.47308 2 10.667 3.19391 10.667 4.66667Z"
-                      stroke="#CED3DC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <div className={styles.gmail}>
-                <input
-                  disabled
-                  type="text"
-                  placeholder="Name"
-                  value={gmail}
-                  onChange={(e) => {
-                    e.preventDefault();
-                    return setGmail(e.target.value);
-                  }}
-                />
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M5.83301 14.1666L14.1663 5.83325M14.1663 5.83325H5.83301M14.1663 5.83325V14.1666"
-                      stroke="#348CD3"
-                      strokeWidth="1.66667"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <div className={styles.services}>
-                <select
-                  id=""
-                  value={service}
-                  onChange={(e) => setServices(e.target.value)}
+          {/* {newscreenWidth && ( */}
+          <form
+            onSubmit={submitHandler}
+            className={`${styles.right} ${openForm ? styles.open : ""}`}
+          >
+            <div className={styles.name}>
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => {
+                  e.preventDefault();
+                  setName(e.target.value);
+                }}
+              />
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
                 >
-                  <option value="">Which of our services do you need?</option>
-                  <option value="1">Which of our services do you need?</option>
-                  <option value="2">Which of our services do you need?</option>
-                  <option value="2">Which of our services do you need?</option>
-                </select>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M4 6L8 10L12 6"
-                      stroke="#CED3DC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <div className={styles.textAreaDiv}>
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                  placeholder="Message"
-                  value={textArea}
-                  onChange={(e) => setTextArea(e.target.value)}
-                ></textarea>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M14 10C14 10.3536 13.8595 10.6928 13.6095 10.9428C13.3594 11.1929 13.0203 11.3333 12.6667 11.3333H4.66667L2 14V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H12.6667C13.0203 2 13.3594 2.14048 13.6095 2.39052C13.8595 2.64057 14 2.97971 14 3.33333V10Z"
-                      stroke="#CED3DC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <Button
-                background="#00703C"
-                color="#FFF"
-                onHandler={submitHandler}
+                  <path
+                    d="M13.3337 14V12.6667C13.3337 11.9594 13.0527 11.2811 12.5526 10.781C12.0525 10.281 11.3742 10 10.667 10H5.33366C4.62641 10 3.94814 10.281 3.44804 10.781C2.94794 11.2811 2.66699 11.9594 2.66699 12.6667V14M10.667 4.66667C10.667 6.13943 9.47308 7.33333 8.00033 7.33333C6.52757 7.33333 5.33366 6.13943 5.33366 4.66667C5.33366 3.19391 6.52757 2 8.00033 2C9.47308 2 10.667 3.19391 10.667 4.66667Z"
+                    stroke="#CED3DC"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div className={styles.gmail}>
+              <input
+                disabled
+                type="text"
+                placeholder="Name"
+                value={gmail}
+                onChange={(e) => {
+                  e.preventDefault();
+                  setGmail(e.target.value);
+                }}
+              />
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M5.83301 14.1666L14.1663 5.83325M14.1663 5.83325H5.83301M14.1663 5.83325V14.1666"
+                    stroke="#348CD3"
+                    strokeWidth="1.66667"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div className={styles.services}>
+              <select
+                id=""
+                value={service}
+                onChange={(e) => setServices(e.target.value)}
               >
-                Lets Talk
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M4.16699 10.0001H15.8337M15.8337 10.0001L10.0003 4.16675M15.8337 10.0001L10.0003 15.8334"
-                      stroke="white"
-                      strokeWidth="1.67"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </Button>
-            </form>
-          )}
+                <option value="">Which of our services do you need?</option>
+                <option value="1">Which of our services do you need?</option>
+                <option value="2">Which of our services do you need?</option>
+                <option value="2">Which of our services do you need?</option>
+              </select>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#CED3DC"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div className={styles.textAreaDiv}>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                value={textArea}
+                onChange={(e) => setTextArea(e.target.value)}
+              ></textarea>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14 10C14 10.3536 13.8595 10.6928 13.6095 10.9428C13.3594 11.1929 13.0203 11.3333 12.6667 11.3333H4.66667L2 14V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H12.6667C13.0203 2 13.3594 2.14048 13.6095 2.39052C13.8595 2.64057 14 2.97971 14 3.33333V10Z"
+                    stroke="#CED3DC"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <Button
+              background="#00703C"
+              color="#FFF"
+              handler={submitHandler}
+              eventType="Submit"
+            >
+              Lets Talk
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M4.16699 10.0001H15.8337M15.8337 10.0001L10.0003 4.16675M15.8337 10.0001L10.0003 15.8334"
+                    stroke="white"
+                    strokeWidth="1.67"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </Button>
+          </form>
+          {/* )} */}
         </div>
       </div>
     </Container>

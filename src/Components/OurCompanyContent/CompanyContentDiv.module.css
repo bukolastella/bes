@@ -1,6 +1,9 @@
 .companyContentDiv {
   background-color: #fff;
   margin-top: 120px;
+  position: relative;
+  height: auto;
+  width: 100%;
 }
 
 .companyContentDiv > h2 {
@@ -49,8 +52,7 @@
   column-gap: 20px;
 }
 .left > li:first-child {
-  display: flex;
-  justify-content: space-between;
+  padding: 5px 0px;
 }
 .left > li:first-child > div {
   display: flex;
@@ -62,10 +64,10 @@
 }
 .contentDiv > .left > li:first-child div > span {
   margin-left: 14px;
+  font-size: 17px;
 }
 
-.left > li:first-child > span {
-  margin-top: 10px;
+.left > li:first-child button {
   display: none;
 }
 
@@ -83,7 +85,9 @@
 .contentDiv > .right {
   width: 640px;
   padding: 0px;
+  transition: transform 0.5s ease-out;
 }
+
 .contentDiv > .right > div {
   position: relative;
   display: flex;
@@ -135,29 +139,61 @@
 }
 @media (max-width: 940px) {
   .companyContentDiv {
-    width: 100%;
+    width: 90%;
+    margin: 20px auto;
     padding: 0px;
   }
   .contentDiv {
     width: 100%;
     flex-direction: column;
-    padding: 0px 0px 30px 0px;
+    padding: 0px 0px 50px 0px;
+    position: relative;
+    row-gap: 20px;
+    columns: 0px;
   }
   .contentDiv > .right,
   .contentDiv > .left {
     width: 100%;
+    /* margin: 0 auto; */
+    /* width: 90%;
+    margin: 0 auto; */
+    position: relative;
     padding: 0px;
+    /* border: 2px solid red; */
   }
 
+  .contentDiv > .right {
+    display: none;
+    top: 20px;
+  }
+  .contentDiv > .right.open {
+    margin-top: 0px;
+    display: block;
+  }
   .companyContentDiv > h2 {
     font-size: 30px;
   }
-  .left > li:first-child > span {
+  .left > li:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left > li:first-child button {
     display: block;
+    cursor: pointer;
+    /* transform: rotate(360deg); */
+  }
+  .left > li:first-child button svg.openForm {
+    transition: transform 0.5s ease-in;
+    transform: rotate(180deg);
+  }
+  .contentDiv > .left > li:first-child div > svg {
+    transition: transform 0.5s ease-in;
+    transform: rotate(0deg);
   }
   .contentDiv > .left > li:first-child {
     width: 100%;
   }
+
   .left > li:nth-child(2) {
     width: 300px;
   }

@@ -1,12 +1,15 @@
 import Header from "../Components/Header-Section/Header";
-import CompanyContent from "../Components/OurCompanyContent/CompanyContent";
+import CompanyContentDiv from "../Components/OurCompanyContent/CompanyContentDiv";
+import Map from "../Components/OurCompanyContent/Map";
+// import CompanyContent from "../Components/OurCompanyContent/CompanyContent";
 // import Map from "../Components/OurCompanyContent/Map";
 
 function OurCompany() {
   return (
     <div>
       <Header />
-      <CompanyContent />
+      <Map />
+      <CompanyContentDiv />
     </div>
   );
 }

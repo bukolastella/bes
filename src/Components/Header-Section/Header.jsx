@@ -2,20 +2,23 @@ import { Link } from "react-router-dom";
 import Button from "../Reusable-Components/Button";
 import Container from "../Reusable-Components/Container";
 import styles from "./Header.module.css";
+import { useState } from "react";
+
 // import Container from "./Components/Reusable-Components/Container";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import Hamburger from "./Hamburger";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <Container paddingType="sidePaddings">
       <div className={styles.header}>
         <Logo />
-        <Nav />
+        <Nav open={open} setOpen={setOpen} />
         <div className={styles.btnContainer}>
-          <Link to="ourcompany" replace>
-            {/* <Link> */}
+          <Link to="/contact">
             <Button>
               Contact Us
               <span>
@@ -47,7 +50,7 @@ function Header() {
             </Button>
           </Link>
         </div>
-        <Hamburger />
+        <Hamburger open={open} setOpen={setOpen} />
       </div>
     </Container>
   );

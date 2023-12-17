@@ -1,5 +1,13 @@
 import styles from "./Button.module.css";
-function Button({ background = "#005CB7", color = "#FAFBFC", children }) {
+function Button({
+  background = "#005CB7",
+  color = "#FAFBFC",
+  children,
+  handler,
+  eventType = "Click",
+}) {
+  // const event = {eventType ? onClick={handlerClick} :  onSubmit={handlerSubmit}}
+
   return (
     <button
       style={{
@@ -11,6 +19,8 @@ function Button({ background = "#005CB7", color = "#FAFBFC", children }) {
         fontWeight: "500",
       }}
       className={styles.btn}
+      onClick={eventType === "Click" ? handler : undefined}
+      onSubmit={eventType === "Submit" ? handler : undefined}
     >
       {children}
     </button>

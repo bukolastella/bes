@@ -2,7 +2,9 @@
   padding: 52px 0px;
   text-align: center;
 }
-
+.recentProject a {
+  text-decoration: none;
+}
 .recentProject > h3 {
   color: #00703c;
   font-family: "Roboto", serif;

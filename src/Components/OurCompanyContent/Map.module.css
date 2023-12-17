@@ -1,9 +1,9 @@
 .mapContainer {
   position: relative;
-  height: 600px;
+  height: 550px;
   border-radius: 10px;
-
-  /* max-width: 975px; */
+  width: 900px;
+  margin: 20px auto 0px;
   /* height: 704px; */
   /* border: 2px solid red; */
 }
@@ -43,6 +43,7 @@
 @media (max-width: 950px) {
   .mapContainer {
     height: 400px;
+    width: 80%;
   }
 }
 @media (max-width: 600px) {
