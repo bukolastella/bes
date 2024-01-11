@@ -44,10 +44,11 @@
 /* ==============Cards styles ============= */
 .content > .cards {
   margin-top: 24px;
-  display: flex;
+  
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: auto;
+  gap: auto; */
 }
 .ourTeam > .content {
   position: relative;

@@ -4,14 +4,14 @@
   border-radius: 10px;
   width: 900px;
   margin: 20px auto 0px;
-  /* height: 704px; */
-  /* border: 2px solid red; */
+  z-index: 2;
 }
 .map {
   height: 100%;
   width: 100%;
 }
 .mapParent {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;

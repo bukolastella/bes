@@ -98,15 +98,18 @@
   width: 100%;
   margin-top: 20px;
   padding-bottom: 70px;
-
-  /* height: auto; */
-  /* height: 500px; */
-  /* border: 2px solid red; */
-  /* object-fit: cover; */
 }
-.successfulProjectsImageDiv img {
+.successfulProjectsImageDiv div {
   width: 100%;
   height: 100%;
+  border-radius: 8px;
+  /* border: 2px solid red; */
+  height: 700px;
+}
+.successfulProjectsImageDiv div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (max-width: 1024px) {
   .expertise > h3 {
@@ -135,6 +138,9 @@
 
   .expertiseCard {
     width: 340px;
+  }
+  .successfulProjectsImageDiv div {
+    height: 600px;
   }
 }
 /* @media (max-width: 768px) { */
@@ -166,6 +172,9 @@
   .expertiseCard {
     width: 280px;
   }
+  .successfulProjectsImageDiv div {
+    height: 500px;
+  }
 }
 @media (max-width: 430px) {
   .expertise {
@@ -180,9 +189,16 @@
   .experience > p {
     font-size: 16px;
   }
+  .successfulProjectsImageDiv div {
+    height: 350px;
+  }
 }
+
 @media (max-width: 360px) {
   .expertise > h3 {
     margin-left: 0px;
+  }
+  .successfulProjectsImageDiv div {
+    height: 280px;
   }
 }

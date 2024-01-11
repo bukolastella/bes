@@ -165,9 +165,11 @@ const topArray = [
   },
 ];
 const bottomArrayImages = [
+  "../what0.png",
+  "../what1.png",
+  "../whatimage3.png",
   "../whatimage1.png",
   "../whatimage2.png",
-  "../whatimage3.png",
 ];
 function WhatHeroSection() {
   return (

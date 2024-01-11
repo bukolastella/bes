@@ -40,13 +40,15 @@ nav :global(.active) {
   }
   nav > ul {
     width: 100%;
+    height: 100vh;
     flex-direction: column;
-    padding-top: 400px;
-
+    padding: 400px 20px 0px 20px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
-    background-color: #f2f2ed;
+    /* background-color: #f2f2ed; */
+    background-color: #eef8fc;
     margin-left: 120%;
     /* transform: translateX(100%); */
   }
