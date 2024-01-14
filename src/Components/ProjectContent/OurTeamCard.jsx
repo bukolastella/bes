@@ -1,4 +1,4 @@
-import styles from "./OutTeamCard.module.css";
+import styles from "./OurTeamCard.module.css";
 
 function OurTeamCard() {
   return (
