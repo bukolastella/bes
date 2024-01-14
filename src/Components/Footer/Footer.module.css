@@ -2,7 +2,8 @@
   width: 100%;
   height: auto;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .footerTop {
   display: flex;

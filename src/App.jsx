@@ -7,13 +7,11 @@ import OurCompany from "./Pages/OurCompany";
 import OurProjects from "./Pages/OurProjects";
 import PageNotFound from "./Pages/PageNotFound";
 
-import "./index.css";
 // import Header from "./Components/Header-Section/Header";
 
 function App() {
   return (
     <div className="app">
-      {/* <Header /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
